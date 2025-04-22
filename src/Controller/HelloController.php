@@ -10,7 +10,9 @@ class HelloController extends AbstractController
     #[Route('/', name: 'hello')]
     public function index(): Response
     {
-        return new Response('Hallo dfdf!');
+        return $this->render('base.html.twig', [
+            'name' => 'name',
+        ]);
     }
    
 
