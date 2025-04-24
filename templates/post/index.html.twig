@@ -5,11 +5,31 @@
 {% block title %}test{% endblock %}
 
 {% block body %}
-\
-
-<div class="example-wrapper">
-home
 
 
-</div>
+<header class="flex justify-between items-center bg-gray-100 p-4 shadow-md">
+  <!-- Logo or Title -->
+  <div>
+    <h1 class="text-xl font-semibold text-gray-800">Test</h1>
+  </div>
+
+  <!-- User and Navigation Links -->
+  <div class="flex items-center space-x-6">
+    <!-- Logged-in Info -->
+    <p class="text-sm text-gray-700">
+      Logged in as <span class="font-medium text-blue-600">Ahmad</span>
+    </p>
+
+    <!-- Navigation Links -->
+    <nav class="flex space-x-4">
+      <a href="{{ path('posts.new') }}" class="text-sm text-gray-800 hover:text-blue-600">New Post</a>
+      <a href="" class="text-sm text-gray-800 hover:text-blue-600">Login</a>
+      <a href="" class="text-sm text-gray-800 hover:text-blue-600">Register</a>
+    </nav>
+  </div>
+</header>
+
+
+
+
 {% endblock %}
